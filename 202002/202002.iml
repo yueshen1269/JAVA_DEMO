@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/cn" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/12" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/13" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/inheritance" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

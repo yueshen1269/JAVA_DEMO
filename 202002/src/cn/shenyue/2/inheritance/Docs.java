@@ -36,6 +36,47 @@ public class Docs {
      *      2. 如果子类能够拥有自己的相等概念，则对称性需求将强制采用getClass进行检测
      *      3. 如果有超类决定相等的概念，就可以使用instanceof进行检测
      *      4. 对于数组类型的域，可以使用静态的Arrays.equals() 方法检测是否相等
+     *   3. Object.hashCode()
+     *      1. 散列码是由对象导出的一个整型值
+     *      2. Object类的默认hashcode方法导出的是对象的对象存储值
+     *      3. 字符串的散列码是由内容导出的
+     *      4. Objects.hashCode() Double.hashCode() 单个值
+     *      5. Objects.hash() 多个值
+     *      6. Arrays.hashCode()
+     *   4. Object.toString()
+     *      1. Arrays.toString()
+     * 5.3 泛型数组列表
+     *  1. ArrayList<Employee> staff = new ArrayList<Employee>();
+     *  2. 简写： ArrayList<Employee> staff = new ArrayList<>(100); (100可选，为初始容量)
+     *  3. staff.add(new Employee()) staff.add(n, e) staff.ensureCapacity(100) staff.size()
+     *      staff.trimToSize() staff.set(i, harry) staff.get(i) staff.toArray(array)
+     *      staff.remove(n)
+     *  4. 类型参数不允许是基本类型，如ArrayList<int>, 须写成ArrayList<Integer> list = new ArrayList<>();
+     *  5. 使用add方法添加元素，set方法替换元素
+     * 5.4 自动装箱和自动拆箱
+     *      list.add(3) => list.add(Integer.valueOf(3)) 自动装箱
+     *      int n = list.get(i) => int n = list.get(i).intValue(); 自动拆箱
+     * 5.5 参数可变的方法
+     *       Object... args
+     * 5.6 枚举类
+     *   1. public enum Size { SMALL， MEDIUM, LARGE, EXTRA_LARGE}
+     *   2. 比较两个枚举类的值是，直接使用 ==, 而不要使用equals
+     *   3. 所有的枚举类型都是Enum类的子类，继承了很多方法， 如 Size.SMALL.toString()
+     *   4. toString的逆方法是静态方法valueOf, 如 Size s = Enum.valueOf(Size.class, "SMALL");
+     *   5. 每个枚举类型都有一个静态的values方法，他将返回一个包含全部枚举值的数组 Size[] values = Size.values();
+     *   6. ordinal方法返回enum声明中枚举常量的位置，从0开始，如 Size.LARGE.ordinal()
+     * 5.7 反射
+     * 5.8 继承的设计技巧
+     *  1. 将公共操作和域放在超类
+     *  2. 不要使用受保护的域
+     *  3. 使用继承实现”is-a"关系
+     *  4. 除非所有继承的方法都有意义，否则不要使用继承
+     *  5. 在覆盖方法是，不要改变预期的行为
+     *  6. 使用多态，而非类型信息
+     *  7. 不要过多使用反射
+     *
+     *
+     *
      *
      */
 }

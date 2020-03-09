@@ -129,7 +129,7 @@ public class DocsChapter6 {
      *      invite(new ArrayList<String>() {{add("Harry"); add("Tony");}});
      *      外层括号建立以一个ArrayList的匿名子类，内层括号则是一个对象构造块
      *  16. 静态内部类： 有时候使用内部类只是为了把一个类隐藏在另外一个类的内部，并不需要内部类引用外围类对象，
-     *      为此可以将内部类声明为static，一边取消产生的引用
+     *      为此可以将内部类声明为static，以便取消产生的引用
      *
      */
 }

@@ -10,8 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/Interfaces" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/Generic" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/Collection" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

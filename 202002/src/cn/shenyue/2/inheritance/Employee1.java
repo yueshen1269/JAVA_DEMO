@@ -39,4 +39,11 @@ public class Employee1 {
                 && salary == other.salary
                 && Objects.equals(hireDay, other.hireDay);
     }
+
+    @Override
+    public String toString() {
+        return getClass() + "{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

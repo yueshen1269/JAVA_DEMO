@@ -72,6 +72,39 @@ public class Docs {
      *      *在运行时查看对象，例如，编写一个toString方法供所有类使用
      *      *实现通用的数组操作代码
      *      *利用Method对象，这个对象很像C++中的函数指针
+     *  3. 在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为运行时的类型标识。这个信息跟踪着每个对象所属的类，
+     *      虚拟机利用运行时类型信息选择相应的方法执行。可以通过专门的Java类信息访问这些信息，保存这些信息的类
+     *      被称为Class，
+     *      这个名字很容日让人混淆。Object类中的getClass()方法将会返回一个Class类型的实例。
+     *  4. 一个Class对象将表示一个特定类的属性，最常用的Class方法是getName，这个方法将返回类的名字，如果类在一个包里，
+     *      包的名字也作为类名的一部分，还可以调用静态方法forName获得类名对应的Class对象
+     *          String className = "java.util.Random";
+     *          Class cl = Class.forName(className);
+     *       这个方法只有在className是类名或者是接口名是才能够执行，否则，forName方法将抛出一个
+     *       checked exception(已检查异常）。无论何时使用这个方法，都应该提供一个异常处理器。
+     *  5. 获得Class类对象的第三种方法非常简单，如果T是任意的Java类型（或void关键字），T.class 将代表匹配
+     *      的类对象，例如
+     *          Class cl1 = Random.class; // if you import java.util.*;
+     *          Class cl2 = int.class;
+     *          Class cl3 = Double[].class;
+     *      一个Class对象实际上表示的是一个类型，而这个类型未必一定是一种类。例如，int不是类，但int.class是一个
+     *      Class类型的对象。Class类实际上是一个泛型类。例如，Employee.class的类型是Class<Employee>.
+     *  6. 虚拟机为每个类型管理一个Class对象，因此可以利用 == 运算符实现两个类对象比较的操作。例如：
+     *      if(e.getClass() == Employee.class) ...
+     *     还有一个很有用的方法newInstance(),可以用来动态地创建一个类的实例，例如，
+     *     e.getClass().newInstance();
+     *     创建了一个与e具有相同类类型的实例，newInstance调用默认的构造器初始化新的对象，没有则抛出一个异常
+     *  7. 反射机制最重要的内容--检查类的结构
+     *      java.lang.reflect包中有三个类Filed、Method和Constructor分别用于描述类的域、方法和构造器,
+     *      这三个类都有一个叫做getName 的方法，用来返回项目的名称
+     *      Field类有一个getType方法，用来返回描述域所属类型的Class对象
+     *      java.lang.reflect包中的Modifier类
+     *      Class类中的getFields、getMethods和getConstructors方法将分别返回类提供的public域、方法和构造器数组
+     *      其中包括超类的公有成员
+     *      Class类的getDeclareFields、getDeclaredMethods和getDeclaredConstructors方法将分别返回类中
+     *      声明的全部域、方法和构造器，其中包括私有和受保护成员，但不包括超类的成员
+     *      详见ReflectionTest.java
+     *
      * 5.8 继承的设计技巧
      *  1. 将公共操作和域放在超类
      *  2. 不要使用受保护的域

@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/Generic" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/Collection" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/Concurrency" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/cn/shenyue/2/GOF23" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
